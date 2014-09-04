@@ -45,9 +45,7 @@ app.directive('impress', function () {
         replace:true,
         scope:{},
         templateUrl:'/views/impress.html',
-        compile: function () {
-            return impressInit;
-        }
+        compile: impressInit
     };
 });
 
