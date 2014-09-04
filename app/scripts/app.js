@@ -35,10 +35,6 @@ angular
                 templateUrl: 'views/filter.html',
                 controller: 'FilterCtrl'
             })
-            .when('/directive', {
-                templateUrl: 'views/directive.html',
-                controller: 'DirectiveCtrl'
-            })
             .otherwise({
                 redirectTo: '/'
             });
