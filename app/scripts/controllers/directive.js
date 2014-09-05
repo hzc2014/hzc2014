@@ -38,7 +38,7 @@ app.directive('impress', function () {
                     $('#main').show();
                     window.clearInterval(impressInterval);
                 }
-            }, 25);
+            }, 2500);
         });
     };
     return {

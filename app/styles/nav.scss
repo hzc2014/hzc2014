@@ -52,7 +52,7 @@ body {
   position: relative;
 }
 .navIL, .navIM, .logoPNG {
-  background-image: url(images/nav.png);
+  background-image: url(../images/nav.png);
 }
 .topNav {
   height: 75px;
@@ -214,7 +214,7 @@ h1.logoPNG {
   z-index: 3;
 }
 .navSub dt, .navSub, li.nav3, a.nav4:hover, .navSub a:hover {
-  background-image: url(images/navSub.png);
+  background-image: url(../images/navSub.png);
   background-repeat: no-repeat;
 }
 /* 代码整理：懒人之家 www.lanrenzhijia.com */
