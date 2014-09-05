@@ -52,6 +52,8 @@ app.directive('impress', function () {
 
 app.directive('nav', function () {
     function navInit() {
+        var $ = (window.$ || function () {
+        });
         var $navTop = $('#topNav'), $navMain = $navTop.find('#navMain'), $navSub = $navMain.find('#navSub'), $navIndex = $navMain.find('#navIndex'), de = 200;
         $navIndex.mouseenter(function () {
             $navSub.show().stop().animate({

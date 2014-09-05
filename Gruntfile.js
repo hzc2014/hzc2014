@@ -357,7 +357,7 @@ module.exports = function (grunt) {
                             '.htaccess',
                             '*.html',
                             'views/{,*/}*.html',
-                            'images/{,*/}*.{webp}',
+                            'images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                             'fonts/*'
                         ]
                     },
@@ -390,7 +390,13 @@ module.exports = function (grunt) {
                         cwd: '.',
                         src: 'bower_components/canvasloader/js/*',
                         dest: '<%= yeoman.dist %>'
-                    }
+                    }/*,
+                     {
+                     expand: true,
+                     cwd: '.',
+                     src: 'app/styles/nav*//*',
+                     dest: '<%= yeoman.dist %>'
+                     }*/
                 ]
             },
             styles: {
@@ -411,7 +417,7 @@ module.exports = function (grunt) {
             ],
             dist: [
                 'compass:dist',
-//        'imagemin',
+//                'imagemin',
                 'svgmin'
             ]
         },
@@ -463,7 +469,7 @@ module.exports = function (grunt) {
         'concat',
         'ngmin',
         'copy:dist',
-//    'cdnify',
+//        'cdnify',
         'cssmin',
         'uglify',
         'filerev',
