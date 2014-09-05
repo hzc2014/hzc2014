@@ -14,6 +14,7 @@
     <!-- endbuild -->
 
     <link id="impress_link_id" rel="stylesheet" href="bower_components/impress.js/css/impress-demo.css"/>
+    <link rel="stylesheet" href="styles/nav.css">
 
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -21,9 +22,9 @@
 
     <style type="text/css">
         .wrapper {
-            position:absolute;
-            top:50%;
-            left:50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
         }
     </style>
     <script type="text/javascript" src="bower_components/canvasloader/js/heartcode-canvasloader-min.js"></script>
@@ -58,16 +59,10 @@
 
 <!-- Add your site or application content here -->
 <div id="main" class="container" style="display: none">
-    <div class="header">
-        <ul class="nav nav-pills pull-right">
-            <li class="active"><a ng-href="#">Home</a></li>
-            <li><a ng-href="#/about">About</a></li>
-            <li><a ng-href="#">Contact</a></li>
-            <li><a ng-href="#/binding">Binding</a></li>
-            <li><a ng-href="#/filter">Filter</a></li>
-        </ul>
-        <h3 class="text-muted">angularTest</h3>
-    </div>
+
+    <nav></nav>
+
+    <!--<div style="margin-top: 80px;"></div>-->
 
     <div ng-view=""></div>
 

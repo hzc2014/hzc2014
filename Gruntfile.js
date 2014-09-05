@@ -476,4 +476,8 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.registerTask('run', [
+        'serve'
+    ]);
 };
