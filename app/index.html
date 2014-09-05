@@ -18,12 +18,43 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+    <style type="text/css">
+        .wrapper {
+            position:absolute;
+            top:50%;
+            left:50%;
+        }
+    </style>
+    <script type="text/javascript" src="bower_components/canvasloader/js/heartcode-canvasloader-min.js"></script>
 </head>
 <body ng-app="angularTestApp" class="impress-not-supported">
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
+
+<!-- Create a div which will be the canvasloader wrapper -->
+<div id="canvasloader-container" class="wrapper"></div>
+
+<!-- This script creates a new CanvasLoader instance and places it in the wrapper div -->
+<script type="text/javascript">
+    var cl = new CanvasLoader('canvasloader-container');
+    cl.setColor('#260115'); // default is '#000000'
+    cl.setShape('spiral'); // default is 'oval'
+    cl.setDiameter(89); // default is 40
+    cl.setDensity(136); // default is 40
+    cl.setRange(0.8); // default is 1.3
+    cl.setSpeed(4); // default is 2
+    cl.setFPS(60); // default is 24
+    cl.show(); // Hidden by default
+
+    // This bit is only for positioning - not necessary
+    var loaderObj = document.getElementById("canvasLoader");
+    loaderObj.style.position = "absolute";
+    loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
+    loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
+</script>
 
 <!-- Add your site or application content here -->
 <div id="main" class="container" style="display: none">
@@ -46,6 +77,12 @@
 </div>
 
 <impress></impress>
+<div class="hint"><p>Use a spacebar or arrow keys to navigate</p></div>
+<script type="text/javascript">
+    if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
+</script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <!--<script>-->

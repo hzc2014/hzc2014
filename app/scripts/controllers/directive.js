@@ -26,6 +26,7 @@ app.directive('impress', function () {
         imp.init();
 
         $(function () {
+            $('#canvasloader-container').remove();
             var impressInterval = window.setInterval(function () {
                 if (imp.next() === $('#overview').get(0)) {
                     $('#impress_link_id').remove();
