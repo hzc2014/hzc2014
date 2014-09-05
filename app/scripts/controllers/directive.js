@@ -31,9 +31,7 @@ app.directive('impress', function () {
                 if (imp.next() === $('#overview').get(0)) {
                     $('#impress_link_id').remove();
 //            $('#impress_script_id').remove();
-                    $('#impress_main_id').hide(2000, function () {
-                        $(this).remove();
-                    });
+                    $('#impress_main_id').remove();
                     $('body').removeClass('impress-supported impress-enabled impress-on-bored').css('overflow', 'auto');
                     $('#main').show();
                     window.clearInterval(impressInterval);
