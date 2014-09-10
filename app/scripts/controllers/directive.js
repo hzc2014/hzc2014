@@ -26,24 +26,56 @@ app.directive('impress', function () {
         imp.init();
 
         $(function () {
-            $('#canvasloader-container').remove();
+            /**
+             * impress.js progress bar
+             * @type {*|Function|HTMLElement}
+             */
+            var webLoadingDiv = $('#web_loading div');
+            webLoadingDiv.animate({width: '1%'});//init progress
+            webLoadingDiv.animate({width: '100%'}, 30000, function () {
+            });
+
+            /**
+             *impress switch
+             */
+            $('#canvasloader-container').remove();//destroy flush cion
+            function jumpOver() {
+                webLoadingDiv.fadeOut(500);
+                $('#impress_link_id').remove();
+//            $('#impress_script_id').remove();
+                $('#impress_main_id').remove();
+                $('body').removeClass('impress-supported impress-enabled impress-on-bored').css('overflow', 'auto');
+                $('#main').show();
+                window.clearInterval(impressInterval);
+            }
+
             var impressInterval = window.setInterval(function () {
                 if (imp.next() === $('#overview').get(0)) {
-                    $('#impress_link_id').remove();
-//            $('#impress_script_id').remove();
-                    $('#impress_main_id').remove();
-                    $('body').removeClass('impress-supported impress-enabled impress-on-bored').css('overflow', 'auto');
-                    $('#main').show();
-                    window.clearInterval(impressInterval);
+                    jumpOver();
                 }
             }, 2500);
+
+            /**
+             * jump over  / never show ,event
+             */
+//            var btns = $('#jump_over').children();
+//            var neverShow = btns.first();
+//            var tiaoGuo = btns.last();
+//            neverShow.click(function () {
+//
+//            });
+//            tiaoGuo.mouseover(function () {
+//                tiaoGuo.click(function (event) {
+//                    jumpOver();
+//                });
+//            });
         });
     };
     return {
-        restrict:'E',
-        replace:true,
-        scope:{},
-        templateUrl:'/views/impress.html',
+        restrict: 'E',
+        replace: true,
+        scope: {},
+        templateUrl: '/views/impress.html',
         compile: impressInit
     };
 });
@@ -90,11 +122,12 @@ app.directive('nav', function () {
             $navIndex.find('li:eq(' + i + ')').removeClass('nav3');
         });
     }
+
     return {
-        restrict:'E',
-        replace:true,
-        scope:{},
-        templateUrl:'/views/nav.html',
+        restrict: 'E',
+        replace: true,
+        scope: {},
+        templateUrl: '/views/nav.html',
         compile: navInit
     };
 });
