@@ -26,6 +26,7 @@ app.directive('impress', function () {
         imp.init();
 
         $(function () {
+
             /**
              * impress.js progress bar
              * @type {*|Function|HTMLElement}
