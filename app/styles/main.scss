@@ -3,6 +3,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+/*--------------------------------------------------------------------- 导航条背景等*/
+.navbar-bg {
+  height: 50px;
+//  background: none repeat scroll 0% 0% #393939;
+}
+
 /*--------------------------------------------------------------------- impress进度条*/
 
 #web_loading {
