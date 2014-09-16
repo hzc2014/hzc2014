@@ -128,8 +128,8 @@ app.directive('nav', function () {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: '/views/nav.html',
-        compile: navInit
+        templateUrl: '/views/nav.html'
+        //, compile: navInit
     };
 });
 
