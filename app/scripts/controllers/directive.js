@@ -9,7 +9,7 @@
  */
 var app = angular.module('angularTestApp');
 
-app.directive('impress', function () {
+app.directive('hzcimpress', function () {
     var impressInit = function () {
         var $ = (window.$ || function () {
         });
@@ -54,7 +54,7 @@ app.directive('impress', function () {
                 if (imp.next() === $('#overview').get(0)) {
                     jumpOver();
                 }
-            }, 2500);
+            }, 2);
 
             /**
              * jump over  / never show ,event
@@ -81,7 +81,7 @@ app.directive('impress', function () {
     };
 });
 
-app.directive('nav', function () {
+app.directive('hzcnav', function () {
     function navInit() {
         var $ = (window.$ || function () {
         });
@@ -134,3 +134,11 @@ app.directive('nav', function () {
 });
 
 
+app.directive('hzcfooter', function () {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: {},
+        templateUrl: '/views/footer.html'
+    };
+});

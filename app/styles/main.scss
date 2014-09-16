@@ -3,90 +3,240 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+#index-wrap {
+  background: url("../images/banner_bg.jpg") no-repeat fixed center top #c5c4c0;
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+/*--------------------------------------------------------------------- 首页透明部分*/
+//首页透明背景-设置显示位置
+.index-banner-wrap {
+  height: 423px;
+  margin: 0 auto;
+  position: relative;
+  width: 980px;
+  top: 100px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+//首页透明背景
+.index-banner-inner {
+  float: left;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+//首页透明背景-标题
+.index-banner-inner h1 {
+  color: #FFF;
+  margin-bottom: 50px;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+//首页透明背景-标题下面的内容
+.index-banner-inner p {
+  color: #FBFBFB;
+  width: 410px;
+  font-size: 24px;
+  line-height: 150%;
+  margin-top: 20px;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+//轮换效果
+#carousel-generic {
+  float: right;
+  width: 496px;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
+/*--------------------------------------------------------------------- 分隔符*/
+
+//分隔符
+.divide-line {
+  position: relative;
+  height: 40px;
+  margin: 60px -20px 0px;
+}
+
+//分隔符-中间的文本
+.divide-line p {
+  position: absolute;
+  left: 50%;
+  margin-left: -115px;
+  margin-top: -30px;
+  width: 230px;
+  height: 40px;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+  font-size: 30px;
+  background-color: #FFF;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
+/*--------------------------------------------------------------------- 联系我们*/
 
-  p + h4 {
-    margin-top: 28px;
-  }
+.contact-cases {
+  padding: 50px 0px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+.contact-item {
+  margin-bottom: 30px;
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.contact-info {
+  margin-left: 60px;
+  color: #666;
+}
+
+.contact-icon {
+  float: left;
+  width: 45px;
+  height: 45px;
+  background-image: url("../images/home-contact-icon.png");
+}
+
+.location {
+  background-position: 0px 0px;
+}
+
+.phone {
+  background-position: -45px 0px;
+}
+
+.email {
+  background-position: -90px 0px;
+}
+
+/*--------------------------------------------------------------------- 页脚*/
+//>>页脚左边栏
+.site-footer {
+  padding: 40px 0px;
+  min-height: 150px;
+  background-color: #333;
+  color: #FFF;
+}
+
+.footer-nav {
+  padding-left: 0px;
+  color: #999;
+}
+
+.footer-nav > li {
+  float: left;
+  margin-right: 46px;
+}
+
+.footer-nav > li > a {
+  text-decoration: none;
+  color: #999;
+}
+
+.copyright {
+  color: #999;
+}
+
+p {
+  margin: 0px 0px 10px;
+}
+
+.sns-info {
+  margin-top: 20px;
+}
+
+.sns-info > a.sina-info {
+  background-position: 0px 0px;
+}
+
+.sns-info > a.qq-info {
+  position: relative;
+  background-position: -26px 0px;
+}
+
+.sns-info > a.weixin-info {
+  position: relative;
+  background-position: -52px 0px;
+}
+
+.sns-info > a.douban-info {
+  background-position: -78px 0px;
+}
+
+.sns-info > a {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border-radius: 26px;
+  margin-right: 15px;
+  background-image: url('../images/social.png');
+  cursor: pointer;
+}
+
+//>>页脚右边栏
+.pop:after {
+  position: absolute;
+  left: 68px;
+  bottom: -14px;
+  border-right: 7px solid transparent;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #FFF transparent transparent;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  content: "";
+}
+
+.pop:before {
+  position: absolute;
+  left: 68px;
+  bottom: -15px;
+  border-right: 7px solid transparent;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #D5D8DD transparent transparent;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  content: "";
+}
+
+.pop {
+  display: none;
+  position: absolute;
+  top: -210px;
+  left: -63px;
+  width: 150px;
+  height: 200px;
+  padding: 20px 10px;
+  border: 1px solid #D5D8DD;
+  background-color: #FFF;
+  text-align: center;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+.product {
+  float: left;
+  margin-left: 45px;
+  color: #FFF;
+  text-decoration: none;
+}
+.product-name {
+  line-height: 30px;
+  margin-left: 45px;
+  font-size: 18px;
+}
+.product-logo {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background-image: url('../images/ficons.png');
+  background-size: 90px 30px;
+}
+
+.project {
+  background-position: 0px 0px;
+}
+
+.today {
+  background-position: -30px 0px;
+}
+
+.talk {
+  background-position: -60px 0px;
 }
