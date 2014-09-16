@@ -28,12 +28,12 @@ app.directive('hzcimpress', function () {
         $(function () {
 
             /**
-             * impress.js progress bar
+             * impress.js progress bar1
              * @type {*|Function|HTMLElement}
              */
             var webLoadingDiv = $('#web_loading div');
             webLoadingDiv.animate({width: '1%'});//init progress
-            webLoadingDiv.animate({width: '100%'}, 30000, function () {
+            webLoadingDiv.animate({width: '100%'}, 10000, function () {
             });
 
             /**
@@ -54,7 +54,7 @@ app.directive('hzcimpress', function () {
                 if (imp.next() === $('#overview').get(0)) {
                     jumpOver();
                 }
-            }, 2);
+            }, 2900);
 
             /**
              * jump over  / never show ,event

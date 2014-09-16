@@ -3,11 +3,26 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+/*--------------------------------------------------------------------- impress进度条*/
+
+#web_loading {
+  z-index: 99999;
+  width: 100%;
+  position: fixed;
+  top: 0
+}
+
+#web_loading div {
+  width: 0;
+  height: 4px;
+  background: #FF9F15
+}
+
+/*--------------------------------------------------------------------- 首页透明部分*/
 #index-wrap {
   background: url("../images/banner_bg.jpg") no-repeat fixed center top #c5c4c0;
 }
 
-/*--------------------------------------------------------------------- 首页透明部分*/
 //首页透明背景-设置显示位置
 .index-banner-wrap {
   height: 423px;
@@ -216,11 +231,13 @@ p {
   color: #FFF;
   text-decoration: none;
 }
+
 .product-name {
   line-height: 30px;
   margin-left: 45px;
   font-size: 18px;
 }
+
 .product-logo {
   float: left;
   width: 30px;
