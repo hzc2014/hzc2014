@@ -88,7 +88,7 @@ app.directive('hzcmainconcat', function () {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: '../../views/main/concat.html'
+        templateUrl: 'views/main/concat.html'
     };
 });
 
@@ -97,7 +97,7 @@ app.directive('hzcmainbanner', function () {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: '../../views/main/banner.html'
+        templateUrl: 'views/main/banner.html'
     };
 });
 
