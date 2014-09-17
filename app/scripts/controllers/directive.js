@@ -43,7 +43,6 @@ app.directive('hzcimpress', function () {
             function jumpOver() {
                 webLoadingDiv.fadeOut(500);
                 $('#impress_link_id').remove();
-//            $('#impress_script_id').remove();
                 $('#impress_main_id').remove();
                 $('body').removeClass('impress-supported impress-enabled impress-on-bored').css('overflow', 'auto');
                 $('#main').show();
@@ -55,21 +54,6 @@ app.directive('hzcimpress', function () {
                     jumpOver();
                 }
             }, 2900);
-
-            /**
-             * jump over  / never show ,event
-             */
-//            var btns = $('#jump_over').children();
-//            var neverShow = btns.first();
-//            var tiaoGuo = btns.last();
-//            neverShow.click(function () {
-//
-//            });
-//            tiaoGuo.mouseover(function () {
-//                tiaoGuo.click(function (event) {
-//                    jumpOver();
-//                });
-//            });
         });
     };
     return {
@@ -82,57 +66,13 @@ app.directive('hzcimpress', function () {
 });
 
 app.directive('hzcnav', function () {
-//    function navInit() {
-//        var $ = (window.$ || function () {
-//        });
-//        var $navTop = $('#topNav'), $navMain = $navTop.find('#navMain'), $navSub = $navMain.find('#navSub'), $navIndex = $navMain.find('#navIndex'), de = 200;
-//        $navIndex.mouseenter(function () {
-//            $navSub.show().stop().animate({
-//                'height': '187px'
-//            }, de);
-//            $navTop.stop().animate({
-//                'height': '242px'
-//            }, de);
-//        });
-//        $navMain.mouseleave(function () {
-//            $navSub.stop().animate({
-//                'height': '3px'
-//            }, de, function () {
-//                $navSub.hide();
-//            });
-//            $navTop.stop().animate({
-//                'height': '75px'
-//            }, de);
-//        });
-//        $navIndex.find('li:not(:eq(0))').mouseenter(function () {
-//            var $this = $(this), i = $this.index() - 1;
-//            $(this).addClass('nav3').siblings().removeClass('nav3');
-//            $navSub.find('dt:eq(' + i + ')').show();
-//        }).mouseleave(function () {
-//            var $this = $(this), i = $this.index() - 1;
-//            $this.removeClass('nav3');
-//            $navSub.find('dt:eq(' + i + ')').hide();
-//        });
-//        $navSub.find('dl').hover(function () {
-//            var $this = $(this), i = $this.index() + 1;
-//            $this.find('dt').show();
-//            $navIndex.find('li:eq(' + i + ')').addClass('nav3');
-//        }, function () {
-//            var $this = $(this), i = $this.index() + 1;
-//            $this.find('dt').hide();
-//            $navIndex.find('li:eq(' + i + ')').removeClass('nav3');
-//        });
-//    }
-
     return {
         restrict: 'E',
         replace: true,
         scope: {},
         templateUrl: 'views/nav.html'
-        //, compile: navInit
     };
 });
-
 
 app.directive('hzcfooter', function () {
     return {
@@ -142,3 +82,24 @@ app.directive('hzcfooter', function () {
         templateUrl: 'views/footer.html'
     };
 });
+
+app.directive('hzcmainconcat', function () {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: {},
+        templateUrl: '../../views/main/concat.html'
+    };
+});
+
+app.directive('hzcmainbanner', function () {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: {},
+        templateUrl: '../../views/main/banner.html'
+    };
+});
+
+
+
