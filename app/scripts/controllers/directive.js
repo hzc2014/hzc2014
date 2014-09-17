@@ -76,7 +76,7 @@ app.directive('hzcimpress', function () {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: '/views/impress.html',
+        templateUrl: 'views/impress.html',
         compile: impressInit
     };
 });
@@ -128,7 +128,7 @@ app.directive('hzcnav', function () {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: '/views/nav.html'
+        templateUrl: 'views/nav.html'
         //, compile: navInit
     };
 });
@@ -139,6 +139,6 @@ app.directive('hzcfooter', function () {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: '/views/footer.html'
+        templateUrl: 'views/footer.html'
     };
 });
