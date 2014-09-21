@@ -53,7 +53,7 @@ app.directive('hzcimpress', function () {
                 if (imp.next() === $('#overview').get(0)) {
                     jumpOver();
                 }
-            }, 2900);
+            }, 100);
         });
     };
     return {
@@ -82,6 +82,15 @@ app.directive('hzcfooter', function () {
         templateUrl: 'views/footer.html'
     };
 });
+
+app.directive('hzcmine',function(){
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: {},
+        templateUrl: 'views/main/introduce.html'
+    };
+})
 
 app.directive('hzcmainconcat', function () {
     return {

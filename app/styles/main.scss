@@ -76,13 +76,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 //分隔符-中间的文本
 .divide-line p {
   position: absolute;
-  left: 50%;
+  left: 48%;
   margin-left: -115px;
-  margin-top: -30px;
-  width: 230px;
+  margin-top: -40px;
+  width: 300px;
   height: 40px;
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   background-color: #FFF;
 }
 
@@ -150,6 +150,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 p {
   margin: 0px 0px 10px;
+  font-size: 20px;
 }
 
 .sns-info {
@@ -262,4 +263,10 @@ p {
 
 .talk {
   background-position: -60px 0px;
+}
+
+/*-------------------------------------------------------------首页-------我们*/
+.intro-title {
+  font-weight:1000;
+  font-size: 30px;
 }
