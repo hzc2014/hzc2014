@@ -65,15 +65,25 @@ app.directive('hzcimpress', function () {
     };
 });
 
+/*------------------------导航*/
 app.directive('hzcnav', function () {
     return {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: 'views/nav.html'
+        templateUrl: 'views/nav.html',
+        link:function(scope,element,attr){
+            element.bind('mouseenter',function(){
+               $(this).find("li").mouseenter(function(){
+                   $(this).attr("class","active");
+               }).mouseout(function(){
+                   $(this).removeAttr("class");
+               })
+            })
+        }
     };
 });
-
+/*------------------------------页脚*/
 app.directive('hzcfooter', function () {
     return {
         restrict: 'E',
@@ -82,7 +92,7 @@ app.directive('hzcfooter', function () {
         templateUrl: 'views/footer.html'
     };
 });
-
+/*--------------------------------首页公司介绍*/
 app.directive('hzcmine',function(){
     return {
         restrict: 'E',
@@ -91,7 +101,7 @@ app.directive('hzcmine',function(){
         templateUrl: 'views/main/introduce.html'
     };
 })
-
+/*-----------------------------联系我们*/
 app.directive('hzcmainconcat', function () {
     return {
         restrict: 'E',
@@ -100,7 +110,7 @@ app.directive('hzcmainconcat', function () {
         templateUrl: 'views/main/concat.html'
     };
 });
-
+/*-------------------------------首页图片*/
 app.directive('hzcmainbanner', function () {
     return {
         restrict: 'E',
