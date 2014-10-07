@@ -2,17 +2,19 @@
 
 /**
  * @ngdoc function
- * @name angularTestApp.controller:BindingCtrl
+ * @name HzcWebSite.controller:BindingCtrl
  * @description
  * # BindingCtrl
- * Controller of the angularTestApp
+ * Controller of the HzcWebSite
  */
-var app = angular.module('angularTestApp');
+var app = angular.module('HzcWebSite');
+
+//define jQuery
+var $ = (window.$ || function () {
+});
 
 app.directive('hzcimpress', function () {
     var impressInit = function () {
-        var $ = (window.$ || function () {
-        });
 
         var imp = (window.impress || function () {
             return{
@@ -53,14 +55,14 @@ app.directive('hzcimpress', function () {
                 if (imp.next() === $('#overview').get(0)) {
                     jumpOver();
                 }
-            }, 100);
+            },3000);
         });
     };
     return {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: 'views/impress.html',
+        templateUrl: './views/other/impress.html',
         compile: impressInit
     };
 });
@@ -71,52 +73,56 @@ app.directive('hzcnav', function () {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: 'views/nav.html',
-        link:function(scope,element,attr){
-            element.bind('mouseenter',function(){
-               $(this).find("li").mouseenter(function(){
-                   $(this).attr("class","active");
-               }).mouseout(function(){
-                   $(this).removeAttr("class");
-               })
-            })
+        templateUrl: '../../views/include/nav.html',
+        link: function (scope, element) {
+            element.bind('mouseenter', function () {
+                $(this).find('li').mouseenter(function () {
+                    $(this).attr('class', 'active');
+                }).mouseout(function () {
+                    $(this).removeAttr('class');
+                });
+            });
         }
     };
 });
+
 /*------------------------------页脚*/
 app.directive('hzcfooter', function () {
     return {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: 'views/footer.html'
+        templateUrl: '../../views/include/footer.html'
     };
 });
+
 /*--------------------------------首页公司介绍*/
-app.directive('hzcmine',function(){
+app.directive('hzcmine', function () {
     return {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: 'views/main/introduce.html'
+        templateUrl: '../../views/main/introduce.html'
     };
-})
+});
+
 /*-----------------------------联系我们*/
 app.directive('hzcmainconcat', function () {
     return {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: 'views/main/concat.html'
+        templateUrl: '../../views/main/concat.html'
     };
 });
+
 /*-------------------------------首页图片*/
 app.directive('hzcmainbanner', function () {
     return {
         restrict: 'E',
         replace: true,
         scope: {},
-        templateUrl: 'views/main/banner.html'
+        templateUrl: '../../views/main/banner.html'
     };
 });
 

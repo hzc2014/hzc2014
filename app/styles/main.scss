@@ -3,10 +3,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+//页面加载时的进度条的居中样式
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 /*--------------------------------------------------------------------- 导航条背景等*/
 .navbar-bg {
   height: 50px;
-//  background: none repeat scroll 0% 0% #393939;
+  //  background: none repeat scroll 0% 0% #393939;
 }
 
 /*--------------------------------------------------------------------- impress进度条*/
@@ -267,6 +274,6 @@ p {
 
 /*-------------------------------------------------------------首页-------我们*/
 .intro-title {
-  font-weight:1000;
+  font-weight: 1000;
   font-size: 30px;
 }

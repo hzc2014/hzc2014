@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name angularTestApp.controller:BindingCtrl
+ * @name HzcWebSite.controller:BindingCtrl
  * @description
  * # BindingCtrl
- * Controller of the angularTestApp
+ * Controller of the HzcWebSite
  */
-var app = angular.module('angularTestApp');
+var app = angular.module('HzcWebSite');
 
 //在两个以上的ctorller中共享数据
 app.factory('Data', function () {

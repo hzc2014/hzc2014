@@ -3,7 +3,7 @@
 describe('Controller: BindingCtrl', function () {
 
     // load the controller's module
-    beforeEach(module('angularTestApp'));
+    beforeEach(module('HzcWebSite'));
 
     var BindingCtrl,
         scope;

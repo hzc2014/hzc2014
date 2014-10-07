@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name angularTestApp
+ * @name HzcWebSite
  * @description
- * # angularTestApp
+ * # HzcWebSite
  *
  * Main module of the application.
  */
 angular
-    .module('angularTestApp', [
+    .module('HzcWebSite', [
         'ngAnimate',
         'ngCookies',
         'ngResource',
@@ -23,7 +23,6 @@ angular
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl'
             })
-
             .when('/about', {
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl'
