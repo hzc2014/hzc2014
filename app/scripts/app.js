@@ -27,9 +27,9 @@ angular
                 templateUrl: 'views/website.html',
                 controller: 'WebsiteCtrl'
             })
-            .when('/binding', {
-                templateUrl: 'views/binding.html',
-                controller: 'BindingCtrl'
+            .when('/outsourcing', {
+                templateUrl: 'views/outsourcing.html',
+                controller: 'OutsourcingCtrl'
             })
             .when('/filter', {
                 templateUrl: 'views/filter.html',
