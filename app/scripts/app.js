@@ -31,9 +31,9 @@ angular
                 templateUrl: 'views/outsourcing.html',
                 controller: 'OutsourcingCtrl'
             })
-            .when('/filter', {
-                templateUrl: 'views/filter.html',
-                controller: 'FilterCtrl'
+            .when('/development', {
+                templateUrl: 'views/development.html',
+                controller: 'DevelopmentCtrl'
             })
             .otherwise({
                 redirectTo: '/'
