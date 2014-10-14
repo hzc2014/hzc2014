@@ -39,6 +39,10 @@ angular
                 templateUrl:'views/team.html',
                 controller:'TeamCtrl'
             })
+            .when('/joinus',{
+                templateUrl:'views/joinus.html',
+                controller:'JoinusCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
