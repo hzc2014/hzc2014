@@ -114,6 +114,7 @@ app.directive('hzcmainconcat', function () {
         scope: {},
         templateUrl: '../../views/main/concat.html'
     };
+
 });
 
 /*-------------------------------首页图片*/

@@ -23,17 +23,25 @@ angular
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl'
             })
-            .when('/about', {
-                templateUrl: 'views/about.html',
-                controller: 'AboutCtrl'
+            .when('/website', {
+                templateUrl: 'views/website.html',
+                controller: 'WebsiteCtrl'
             })
-            .when('/binding', {
-                templateUrl: 'views/binding.html',
-                controller: 'BindingCtrl'
+            .when('/outsourcing', {
+                templateUrl: 'views/outsourcing.html',
+                controller: 'OutsourcingCtrl'
             })
-            .when('/filter', {
-                templateUrl: 'views/filter.html',
-                controller: 'FilterCtrl'
+            .when('/development', {
+                templateUrl: 'views/development.html',
+                controller: 'DevelopmentCtrl'
+            })
+            .when('/team',{
+                templateUrl:'views/team.html',
+                controller:'TeamCtrl'
+            })
+            .when('/joinus',{
+                templateUrl:'views/joinus.html',
+                controller:'JoinusCtrl'
             })
             .otherwise({
                 redirectTo: '/'

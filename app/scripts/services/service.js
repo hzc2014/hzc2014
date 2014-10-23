@@ -33,3 +33,6 @@ app.controller('BindingCtrl2', function ($scope, Data) {
         return (message || '').split('').reverse().join('');
     };
 });
+app.controller('DoubleCtrl', ['$scope', function($scope) {
+    $scope.double = function(value) { return value * 2; };
+}]);
