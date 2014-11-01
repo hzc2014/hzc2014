@@ -2625,18 +2625,29 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 6%;
 }
 .tm-head-grid img{
+  width: 160px;
+  border-radius: 30em;
+  -webkit-border-radius: 30em;
+  -moz-border-radius: 30em;
+  -o-border-radius: 30em;
+}
+.tm-head-grid img:hover {
+  opacity: .7;
+  width: 160px;
   border-radius: 30em;
   -webkit-border-radius: 30em;
   -moz-border-radius: 30em;
   -o-border-radius: 30em;
 }
 .tm-head-grid {
+  height: 240px;
   width: 30.33%;
   text-align: center;
   margin-right: 4.5%;
   margin-bottem:2%;
 }
 .tm-head-grids {
+  height: 240px;
   width: 75%;
   margin: 3.3em auto 2.3em auto;
 }
@@ -2654,6 +2665,10 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin: 0 auto;
   font-size: 1em;
 }
+.tm-head-grid-bottom {
+  position: static;
+  clear: both;
+}
 .team-info{
   font-family: 'Droid Serif', serif;
   color: #777777;
@@ -2666,5 +2681,8 @@ h4, .h4, h5, .h5, h6, .h6 {
 .tm-head-grid-info{
   width:66%;
   float:right;
-  margin-top: 40px;
+  margin-top: 50px;
+  text-indent:2em;
+  font-size: 20px;
+  color: rgba(97, 98, 81, 0.70);
 }
