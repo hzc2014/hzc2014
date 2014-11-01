@@ -2596,3 +2596,75 @@ h4, .h4, h5, .h5, h6, .h6 {
   font-size: 20px;
   margin-right: 15px;
 }
+
+/*---------------------------------------精英团队*/
+/*---team-members--*/
+.clear{clear:both;}
+.team-members{
+  padding: 7% 0;
+  background: #F9F9F9;
+}
+.tm-head{
+  text-align:center;
+}
+.tm-head h3{
+  color: #222222;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+  text-transform:uppercase;
+}
+.tm-head p{
+  font-family: 'Droid Serif', serif;
+  font-size: 1.2em;
+  padding: 0.5em 0;
+  color: #777777;
+  line-height: 1.5em;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 6%;
+}
+.tm-head-grid img{
+  border-radius: 30em;
+  -webkit-border-radius: 30em;
+  -moz-border-radius: 30em;
+  -o-border-radius: 30em;
+}
+.tm-head-grid {
+  width: 30.33%;
+  text-align: center;
+  margin-right: 4.5%;
+  margin-bottem:2%;
+}
+.tm-head-grids {
+  width: 75%;
+  margin: 3.3em auto 2.3em auto;
+}
+.tm-head-grid:nth-child(3){
+  margin-right:0;
+}
+.tm-head-grid h4{
+  color: #222222;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.8em 0 0.2em 0;
+}
+.tm-head-grid h5{
+  color: #777777;
+  margin: 0 auto;
+  font-size: 1em;
+}
+.team-info{
+  font-family: 'Droid Serif', serif;
+  color: #777777;
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.8em;
+  text-align: center;
+  width: 60%;
+}
+.tm-head-grid-info{
+  width:66%;
+  float:right;
+  margin-top: 40px;
+}
