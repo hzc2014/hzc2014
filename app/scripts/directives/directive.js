@@ -55,7 +55,7 @@ app.directive('hzcimpress', function () {
                 if (imp.next() === $('#overview').get(0)) {
                     jumpOver();
                 }
-            },3);
+            },2500);
         });
     };
     return {
